@@ -1,98 +1,97 @@
-# Hello Dragon!
+# Hola Dragon!
 
-We'll start by rendering an image and some simple text on the screen. But first, we need to get our computer and DragonRuby Game Toolkit ready for developing.
+Comenzaremos renderizando una imagen y un texto simple en la pantalla. Pero primero, debemos preparar nuestra computadora y DragonRuby Game Toolkit para el desarrollo.
 
-## First Steps
+## Primeros paasos
 
-1. **Download a code editor:** Since you'll be coding your game, you need a special text editor to write the code without any extra formatting that text editors like Microsoft Word add. [Visual Studio Code](https://code.visualstudio.com/) is a great free editor. Download and install it. (Or use your own favorite editor.)
-2. **Get DragonRuby GTK:** You need to get a copy of DragonRuby GTK so you can use the engine. [Buy it on Itch and download the zip file for your operating system.](https://dragonruby.itch.io/dragonruby-gtk/purchase)
-3. **Extract the DRGTK engine zip**: In your computer's file explorer, extract the engine zip file.
+1. **Descargando un editor de código:** Como programaras tu juego, necesitas un editor de texto especial para escribir el código sin ningún formato adicional que agreguen los editores de texto como Microsoft Word. [Visual Studio Code](https://code.visualstudio.com/) es un excelente editor gratuito. Descárgalo e instálalo. (O usa tu propio editor favorito).
+2. **Obten DragonRuby GTK:** Necesitas obtener una licencia de DragonRuby GTK para poder usar el motor. [Cómpralo en Itch y descarga el archivo zip para tu sistema operativo.](https://dragonruby.itch.io/dragonruby-gtk/purchase)
+3. **Extrae el zip del motor DRGTK**: En el explorador de archivos de tu computadora, extrae el archivo zip.
 
-You're ready to work on your game. Let's get to it!
+Estamos listos para trabajar en tu juego. ¡Hagámoslo!
 
-**ProTip:** don't delete the zip file! You can unzip it again for when you start working on your next game. It's helpful to keep it around.
+**ProTip:** ¡No elimine el archivo zip! Puedes descomprimirlo nuevamente para cuando comiences a trabajar en tu próximo juego. Es útil mantenerlo cerca.
 
-## What's in the Engine Zip
+## Qué hay en el archivo comprimido Zip
 
-When you download DragonRuby Game Toolkit, it contains everything you need to build your game. There's no external dependencies to install or monkey with. You just use the provided files and start making your game.
+Cuando descarga DragonRuby Game Toolkit, contiene todo lo que necesita para construir su juego. No hay dependencias externas para instalar o manipular. Simplemente usas los archivos provistos y comienza a hacer tu juego.
 
-Let's go over the key files in the archive you just extracted:
+Repasemos los archivos clave en el archivo que acaba de extraer:
 
-- `dragonruby` — the executable you'll run to launch your game in development mode, your primary entry into the development flow
-- `dragonruby-publish` — a command-line tool to help you easily build and publish your game online, don't worry about this yet!
-- `samples/` — a folder of example code that you can explore and run if you'd like, or just ignore it for now
-- `docs/` — the DragonRuby Game Toolkit docs for the version you've downloaded, extremely handy if you want to dive deeper than this book
-- `mygame/` 🌟 — as the name implies, this is where the code, graphics, sound, and other assets live for your game; this is the primary folder you'll be working in
-    - `app/` — this is where your Ruby code goes
-      - `main.rb` — this is the main file for your game code, don't worry about the other two yet
-    - `data/` — where you can put any data for your game, like level editor files
-    - `fonts/` — where fonts go, duh!
-    - `metadata/` — configuration files for your game, we'll do more here later
-    - `sounds/` — where music and sound effects go
-    - `sprites/` — where images go that will be rendered in the game; there are already some basic ones present
+- `dragonruby` — el ejecutable que usaras para iniciar tu juego en modo de desarrollo, tu entrada principal en el flujo de desarrollo
+- `dragonruby-publish` — una herramienta de línea de comandos para ayudarte a crear y publicar fácilmente tu juego en línea, ¡no te preocupes por eso todavía!
+- `samples/` — una carpeta de código de ejemplo que puede explorar y ejecutar si lo desea, o simplemente ignorarlo por ahora
+- `docs/` — documentos de DragonRuby Game Toolkit para la versión que ha descargado, extremadamente útiles si desea profundizar más que este libro
+- `mygame/` 🌟 —como su nombre lo indica, aquí es donde vive el código, los gráficos, el sonido y otros activos para tu juego; esta es la carpeta principal en la que trabajaras
+  - `app/` — aquí es donde va tu código Ruby
+    - `main.rb` — este es el archivo principal para el código de tu juego, no te preocupes por los otros dos archivos todavía
+  - `data/` — donde puedes poner cualquier dato para tu juego, como archivos del editor de niveles
+  - `fonts/` — donde van las fuentes, duh!
+  - `metadata/` — archivos de configuración para tu juego, trabajaremos aquí más adelante
+  - `sounds/` — donde van la música y los efectos de sonido
+  - `sprites/` — dónde van las imágenes que se renderizarán en el juego; ya hay algunas imagenes presentes en este folder
 
-Don't worry about the other files yet. Focus on the `mygame/` directory, and, specifically, `mygame/app/main.rb`.
+No te preocupes por los otros archivos todavía. Centrarse en el folder o directorio `mygame/`, y, especificamente en, `mygame/app/main.rb`.
 
-## Start the Game
+## Comienza el juego
 
-Launch the `dragonruby` file.
+Inicia el archivo `dragonruby`.
 
-If you're on MacOS, right-click the file and select "Open". You'll need to ensure software from unverified sources can be run.
+Si está en MacOS, haga clic derecho en el archivo y selecciona "Abrir". Deberá asegurarte de que se pueda ejecutar el software de fuentes no verificadas.
 
-Here's what gets displayed:
+Esto es lo que se muestra:
+![captura de pantalla de Hello World! Para DragonRuby GTK](./img/hello-world.jpg)
 
-![screenshot of the Hello World! for DragonRuby GTK](./img/hello-world.jpg)
+Esto no es un juego... ¡todavía! Pero estas haciendo tres cosas clave:
 
-This isn't a game... yet! But it is doing three key things:
+1. Abrir una ventana de aplicación
+2. Renderizar textos
+3. Mostrar una imagen
 
-1. Launching an app window
-2. Rendering text
-3. Displaying an image
+Y aún no has escrito ningún código. No es un mal punto de partida.
 
-And you haven't even written any code yet. Not a bad starting place.
+DRGTK maneja las cosas aburridas cuando se trata de hacer juegos, lidiando con API de bajo nivel como gráficos, ventanas y sonidos. En cambio, podemos centrarnos en crear nuestro juego en lugar de, por ejemplo, descubrir cómo guardar datos de una manera que sea compatible con Linux, Mac, Windows, Android, iOS y la web.
 
-DRGTK handles the boring stuff when it comes to making games — dealing with low-level APIs like graphics, window, and sounds. We can instead focus on creating our game instead of, for example, figuring out how to save data in a way that's compatible with Linux, Mac, Windows, Android, iOS, and web.
+## Una descripción general del archivo principal del juego
 
-## An Overview of the Main Game File
+Echemos un vistazo a lo que hay en `mygame/app/main.rb`:
 
-Let's take a look at what's in `mygame/app/main.rb`:
-
-``` ruby
+```ruby
 {{#include code/chapter_01/01_default/app/main.rb}}
 ```
 
-Open this file yourself in Visual Studio Code. Go ahead and do that: New Window > Open > [select the folder on your computer with the engine in it]
+Abre este archivo en Visual Studio Code. Continúe y haga eso: Nueva ventana> Abrir> [seleccione la carpeta en su computadora con DragonRuby Toolkit]
 
-Six lines of codes to render text and an image? Not bad! (Trust me, if you did this all from scratch without an engine, it'd take hundreds of lines of code.)
+¿Seis líneas de códigos para representar texto y una imagen? ¡Nada mal! (Confía en mí, si hicieras todo esto desde cero sin un motor, tomaría cientos de líneas de código).
 
-Here's what that code does, line by line:
+Esto es lo que hace ese código, línea por línea:
 
-``` ruby
+```ruby
 {{#include code/chapter_01/01_default/app/main.rb:1}}
 ```
 
-This `def`ines a method called `tick` and passes in a parameter called `args`. `args` is short for arguments and is provided to us by DragonRuby GTK.
+Este `def` define un metodo llamado `tick` y pasa un parámetro llamado `args`. `args` es la abreviatura de argumentos y nos lo proporciona DragonRuby GTK.
 
-Methods are reusable pieces of code that you can call to do something over and over again. Think of methods like verbs; they're actions. Methods are a foundational building block that allow for code reuse.
+Los métodos son fragmentos de código reutilizables a los que puede llamar (invocar) para hacer algo una y otra vez. Piensa en métodos como verbos; son acciones. Los métodos son un bloque de construcción fundamental que permite la reutilización del código.
 
-Let's say you wanted to give a friend a cookie 🍪, you'd define a method called `give_cookie` and pass in the `friend` as a parameter. The friend then has a method called `eat` that we call, passing in a parameter of cookie.
+Digamos que quieres darle una galleta a un amigo 🍪, definirías un método llamado `give_cookie` y pasarías `friend` como parámetro. El amigo entonces tiene un método llamado `eat` que llamamos, pasando un parámetro de cookie.
 
-``` ruby
+```ruby
 def give_cookie(friend)
   friend.eat("cookie")
 end
 ```
 
-You'd then call that method like:
+Entonces llamarías o invocarias a ese método como:
 
-``` ruby
+```ruby
 francis = Friend.new
 give_cookie(francis)
 ```
 
-Note: methods in Ruby have optional parentheses. You can use them or leave them out when defining and calling your methods. These are the same:
+Nota: los métodos en Ruby tienen paréntesis opcionales. Puede usarlos o dejarlos fuera al definir y llamar a tus métodos. Estos son los mismos:
 
-``` ruby
+```ruby
 def give_cookie(friend)
   friend.eat("cookie")
 end
@@ -102,105 +101,104 @@ def give_cookie friend
 end
 ```
 
-I'm an agent of chaos and use _both_ styles throughout the book. Gotta keep ya' on your toes!
+Soy un agente del caos y utilizo _ambos_ estilos a lo largo del libro. ¡Tengo que mantenerte alerta!
 
-Wait, how'd we get talking about cookies and friends? Okay, back to the code above.
+Espera, ¿cómo empezamos a hablar de galletas y amigos? Bien, volvamos al código anterior.
 
-The next three lines handle outputting text to the screen:
+Las siguientes tres líneas manejan la salida de texto a la pantalla:
 
-``` ruby
+```ruby
 {{#include code/chapter_01/01_default/app/main.rb:2:4}}
 ```
 
-Your eyes might be melting a little bit. But don't worry, wipe that melted bit of eye away and focus! It's actually pretty intuitive once you get the hang of it.
+Tus ojos pueden estar derritiéndose un poco. ¡Pero no te preocupes, limpia ese ojo derretido y enfócate! En realidad, es bastante intuitivo una vez que le coges el truco.
 
-Remember `args` from above? That parameter that's passed into `tick`? Well, you can call methods on it! This allows you to interact with the game engine.
+¿Recuerdas los `args` de arriba? ¿Ese parámetro que se pasa a `tick`? Bueno, ¡puedes llamar a métodos en él! Esto le permite interactuar con el motor del juego.
 
-`args` has a method called `outputs` that represents the data that gets rendered in the screen. You access it with `args.outputs`. Neato! `labels` is a method on `outputs`, see how the `.` chains things together?
+`args` tiene un método llamado `outputs` que representa los datos que se muestran en la pantalla. Se accede con `args.outputs`. Cool! `labels` es un método de `outputs`, ¿ves cómo el `.` encadena las cosas?
 
-The `<<` is called the shovel operator. It lets you push data into a collection. `labels` is the collection we're shoveling data into because we want to render some text.
+El `<<` se llama operador pala. Le permite insertar datos en una colección. `labels` es la colección en la que estamos metiendo datos porque queremos representar algo de texto.
 
-And then finally the code within the brackets `[]` is an array of data that represents what we want to display on the screen. It may not be clear exactly what it's doing yet, but it'll become more clear over time.
+Y finalmente, el código entre corchetes `[]` es una matriz de datos que representa lo que queremos mostrar en la pantalla. Puede que aún no esté claro exactamente lo que está haciendo, pero se volverá más claro con el tiempo.
 
-I think of arrays like a stack of CDs. The CDs are in a specific order, but you don't know what a given CD is unless you pull one out of the stack and look at it. You have to do the same thing with an array. In programming, you put data into an array to collect that data and keep track of it. If you want to know what's at a specific place in a array, you have to check.
+Pienso en las matrices como una pila de CD. Los CD están en un orden específico, pero no sabes qué es un CD determinado a menos que saques uno de la pila y lo mires. Tienes que hacer lo mismo con una matriz. En la programación, coloca datos en una matriz para recopilar esos datos y realizar un seguimiento de ellos. Si quieres saber qué hay en un lugar específico en una matriz, debe verificar.
 
-You can see some code in quotes, those are strings. And they're what's being displayed by the game. In order to show the text, though, we need to tell the engine where to place it on the screen. That's what the first two elements of the array do: they specify the x and y position of the text in the game. Then there's the text we want to render. That's followed by the text size. Then finally the alignment (centered in this case).
+Puedes ver algo de código entre comillas, esas son cadenas. Y son lo que muestra el juego. Sin embargo, para mostrar el texto, debemos decirle al motor dónde colocarlo en la pantalla. Eso es lo que hacen los dos primeros elementos de la matriz: especifican la posición x e y del texto en el juego. Luego está el texto que queremos representar. Eso es seguido por el tamaño del texto. Luego finalmente la alineación (centrada en este caso).
 
-Here's it broken down:
+Aquí está desglosado:
 
-``` ruby
+```ruby
 #  x,   y,           text, size, alignment
 [640, 500, 'Hello World!',    5,         1]
 ```
 
-Don't worry about memorizing what the positional elements of the array mean. This is just a quick way to render text. We'll start using a more friendly approach soon enough. The sample game does this three times, thus rendering three different pieces of text. The `y` coordinate is different for each, stacking them on top of each other vertically instead of overlapping one another.
+No te preocupe por memorizar lo que significan los elementos posicionales de la matriz. Esta es solo una forma rápida de representar texto. Muy pronto comenzaremos a usar un enfoque más amistoso. El juego de muestra hace esto tres veces, por lo que representa tres fragmentos de texto diferentes. La coordenada `y` es diferente para cada uno, apilándolos uno encima del otro verticalmente en lugar de superponerse entre sí.
 
-Gosh enough of this rambling, let's adjust some code. Change the text from `"Hello World!"` to be `"Hello Dragon!"` and save the file.
+Dios mío, basta de divagaciones, ajustemos un poco el código. Cambia el texto de `"Hello World!"` a `"Hello Dragon!"` y guarda el archivo.
 
-![screenshot of the Hello Dragon! for DragonRuby GTK](./img/hello-dragon.jpg)
+![captura de pantalla de Hello Dragon! Para DragonRuby GTK](./img/hello-dragon.jpg)
 
-Did you see that? The game reloaded your code and changed the text to be "Hello Dragon!" That was quick, wasn't it? That's one of the best parts of DRGTK—live reloading of your game code in the engine. This allows you to make changes to your game quickly, reducing the time between the cycles of writing your code and testing it.
+¿Viste eso? El juego recargó tu código y cambió el texto para que fuera "¡Hello Dragon!" Eso fue rápido, ¿no? Esa es una de las mejores partes de DRGTK: la recarga en vivo de tu código de juego en el motor. Esto le permite realizar cambios en su juego rápidamente, reduciendo el tiempo entre los ciclos de escribir su código y probarlo.
 
-
-``` ruby
+```ruby
 {{#include code/chapter_01/01_default/app/main.rb:5}}
 ```
 
-`args.outputs.sprites` is like labels, but it's instead a collection for sprites. It renders the `"dragonruby.png"` image at x: 576, y: 280, just like label text, but it also sets the size of the image to display. That's what the `128` and `101` represent in the array. Here's a break down of those elements:
+`args.outputs.sprites` es como etiquetas, pero en cambio es una colección de sprites\*. Representa la imagen `"dragonruby.png"` en x: 576, y: 280, al igual que el texto de la etiqueta, pero también establece el tamaño de la imagen para mostrar. Eso es lo que representan `128` y `101` en la matriz. Aquí hay un desglose de esos elementos:
 
-``` ruby
+```ruby
 #  x,   y,   w,   h,            image
 [576, 280, 128, 101, 'dragonruby.png']
 ```
 
-Just like with labels, don't worry about memorizing the order here. There are friendlier ways to display them that we'll get to shortly. But it's an easy enough bit of code for putting an image on the screen.
+Al igual que con las etiquetas, no te preocupes por memorizar el orden aquí. Hay formas más amigables de mostrarlos que veremos en breve. Pero es un código bastante fácil para poner una imagen en la pantalla.
 
-Finally, the last line:
+Finalmente, la última línea:
 
-``` ruby
+```ruby
 {{#include code/chapter_01/01_default/app/main.rb:6}}
 ```
 
-signifies that the definition of the `tick` method is over. Any code after that isn't part of the `tick` method. That's it for what we get out of the box.
+significa que la definición del método `tick` ha terminado. Cualquier código después de eso no es parte del método `tick`. Eso es todo por lo que sacamos de la caja.
 
-## Screen Coordinates Explained
+## Explicación de las coordenadas de la pantalla
 
-Let's take a detour down Screen Coordinates Road. The `x` and `y` position are coordinates on the two-dimensional plane of the game window. Remember geometry? I barely do. But this is important, so don't doze off on me yet. We're only still in the first chapter!
+Tomemos un desvío por el camino de Coordenadas de Pantalla. Las posiciones `x` e `y` son coordenadas en el plano bidimensional de la ventana del juego. ¿Recuerdas la geometría? Apenas lo hago. Pero esto es importante, así que no te quedes dormido conmigo todavía. ¡Solo estamos en el primer capítulo!
 
-![diagram showing x, y axis with 0, 0 being in the bottom left and 1280, 720 being in the upper right](./img/c01-coords.png)
+![diagrama que muestra el eje x y el eje y con 0, 0 en la parte inferior izquierda y 1280, 720 en la parte superior derecha](./img/c01-coords.png)
 
-DRGTK games are made up of a window that's 1280x720 pixels large. That's 1280 pixels wide and 720 pixels tall. The rectangle of the game screen contains 921600 pixels, that's those two numbers multiplied. Each of those pixels has a coordinate on the plane. It makes it easy to refer to a specific pixel by using its `x` and `y` position.
+Los juegos hechos con DRGTK se componen de una ventana que tiene un tamaño de 1280x720 píxeles. Eso es 1280 píxeles de ancho y 720 píxeles de alto. El rectángulo de la pantalla del juego contiene 921600 píxeles, esos dos números multiplicados. Cada uno de esos píxeles tiene una coordenada en el plano. Facilita la referencia a un píxel específico usando su posición `x` e `y`.
 
-DRGTK starts 0, 0 in the lower left. So 1280, 720 would be the upper right. **Note:** this varies from most game engines and libraries and tools, but it's intentional to make it easier to think about gravity and follows the geometric 2D plane that is taught in mathematics.
+DRGTK comienza 0, 0 en la parte inferior izquierda. Entonces 1280, 720 sería la esquina superior derecha. **Nota:** esto varía de la mayoría de los motores de juegos, bibliotecas y herramientas, pero es intencional para que sea más fácil pensar en la gravedad y sigue el plano geométrico 2D que se enseña en matemáticas.
 
-It's important to keep coordinates in mind, as we'll be using them a lot when making our game. A major aspect of games is moving things on the screen, which we do by changing their coordinates on the screen.
+Es importante tener en cuenta las coordenadas, ya que las usaremos mucho al hacer nuestro juego. Un aspecto importante de los juegos es mover cosas en la pantalla, lo que hacemos cambiando sus coordenadas en la pantalla.
 
-## Our Own Hello
+## Nuestro propio hola
 
-Back to making the game. Okay, yeah, you changed a string and it changed what was displayed. That's neat. But let's hit reset and do it ourselves.
+Volviendo a hacer el juego. Bien, sí, cambiaste una cadena y cambió lo que se mostraba. Está muy bien. Pero presionemos reiniciar y hagámoslo nosotros mismos.
 
-I want you to delete the code in `mygame/app/main.rb`. Select it all and delete it. Yup, I know, the blank canvas is a challenge. But you need to start writing the code yourself in order to learn and build the muscle memory. So go ahead and type out each line below into your `main.rb`.
+Quiero que elimines el código en `mygame/app/main.rb`. Selecciónelo todo y elimínalo. Sí, lo sé, el lienzo en blanco es un desafío. Pero debe comenzar a escribir el código tu mismo para aprender y desarrollar la memoria muscular. Así que continúa y escribe cada línea a continuación en tu `main.rb`.
 
-``` ruby
+```ruby
 def tick args
-  args.outputs.labels << [120, 120, "Hello Dragon!"]
+  args.outputs.labels << [120, 120, "Hola Dragon!"]
 end
 ```
 
-You know what that does, right? Well you saw it automatically reload in your game, so of course you do!
+Sabes lo que hace eso, ¿verdad? Bueno, viste que se recarga automáticamente en tu juego, ¡así que por supuesto que lo haces!
 
-Let's greet our friend Oboe too.
+Saludemos también a nuestro amigo Dylan.
 
-``` ruby
+```ruby
 def tick args
   args.outputs.labels << [120, 120, "Hello Dragon!"]
   args.outputs.labels << [120, 100, "Hello Oboe!"]
 end
 ```
 
-Wow, so many friends we're saying hello to! The thing is... that code is a bit... duplicative. Let's write our own method to clean that up:
+¡Vaya, tantos amigos a los que saludamos! La cosa es... que el código es un poco... duplicado. Escribamos nuestro propio método para limpiar eso:
 
-``` ruby
+```ruby
 def greet friend
   "Hello #{friend}!"
 end
@@ -211,47 +209,47 @@ def tick args
 end
 ```
 
-The new code refactors (changes the implementation of the code without changing the behavior) the original so that we can easily change the greeting in one place instead of many. This is a bit of a trivial example, but it shows how we can write our own methods in DRGTK to make our code better. Reusing code is foundational for the rest of this book.
+El nuevo código refactoriza (cambia la implementación del código sin cambiar el comportamiento) el original para que podamos cambiar fácilmente el saludo en un lugar en lugar de muchos. Este es un ejemplo un poco trivial, pero muestra cómo podemos escribir nuestros propios métodos en DRGTK para mejorar nuestro código. La reutilización del código es fundamental para el resto de este libro.
 
-The `"Hello #{friend}!"` code does what's called string interpolation. It takes whatever `friend` is, hopefully a name as a string, and inserts it. It's pretty similar to this code: `"Hello " + friend + "!"`, but quite a bit friendlier to use. The `#{}` tells Ruby to run any Ruby code within those curly braces.
+El código `"Hello #{friend}!"` hace lo que se llama interpolación de cadenas. Toma lo que sea 'amigo', con suerte un nombre como una cadena, y lo inserta. Es bastante similar a este código: `"Hola " + amigo + "!"`, pero un poco más fácil de usar. El `#{}` le dice a Ruby que ejecute cualquier código de Ruby dentro de esas llaves.
 
-Methods in Ruby return a value. Return values can then be used by the caller for whatever purposes are needed. In the example above, the return value is the string we build. Ruby returns the last line of the method definition automatically. But you can explicitly return early with `return`, which can be useful if you want to end the execution of a method early.
+Los métodos en Ruby devuelven un valor. Los valores devueltos pueden ser utilizados por la persona que llama para cualquier propósito que sea necesario. En el ejemplo anterior, el valor de retorno es la cadena que construimos. Ruby devuelve la última línea de la definición del método automáticamente. Pero puedes regresar antes explícitamente con `return`, lo que puede ser útil si quieres terminar la ejecución de un método antes.
 
-Go ahead and change the `#greet` method to:
+Continúe y cambie el método `#greet` a:
 
-``` ruby
+```ruby
 def greet friend
   "Hello #{friend}!"
   1
 end
 ```
 
-Whoa! What happened to our greetings? Well, we changed our code and it now always returns `1`, which isn't what we want. It's just an example to illustrate how that works. Go ahead and undo that change.
+¡Guau! ¿Qué pasó con nuestros saludos? Bueno, cambiamos nuestro código y ahora siempre devuelve `1`, que no es lo que queremos. Es solo un ejemplo para ilustrar cómo funciona. Continúe y deshaga ese cambio.
 
-Let's wrap up this chapter by displaying a sprite. In `mygame/sprites/misc/` there's a file named `dragon-0.png`. It's a pixel art dragon made by Nick Culbertson that's free to use. Pretty neat. Thanks, Nick!
+Terminemos este capítulo mostrando un sprite. En `mygame/sprites/misc/` hay un archivo llamado `dragon-0.png`. Es un dragón de pixel art hecho por Nick Culbertson que es de uso gratuito. Con buena. ¡Gracias, Nick!
 
-``` ruby
+```ruby
 {{#include code/chapter_01/02_our_own_hello/app/main.rb}}
 ```
 
-![screenshot of the Hello Dragon! with pixel dragon displayed](./img/hello-dragon-own.jpg)
+![captura de pantalla de Hello Dragon! con el dragón de píxeles mostrado](./img/hello-dragon-own.jpg)
 
-That's some pretty fine code for the first chapter. We've got text and an image displaying. We learned about methods too. Don't worry if it's not all making total and complete sense. You'll understand more with time. Remember, be patient with yourself.
+Ese es un código bastante bueno para el primer capítulo. Tenemos texto y una imagen que se muestra. También aprendimos sobre métodos. No te preocupes si no todo tiene un sentido total y completo. Lo entenderás más con el tiempo. Recuerda, sé paciente contigo mismo.
 
-## Game Loop Explained
+## Bucle de juego explicado
 
-There's a lot of magic happening where we can just write `def tick` and magically have a game. What's happening here is that DragonRuby Game Toolkit takes the code in `mygame/app/main.rb`, finds the `tick` method, and then runs a loop that calls it 60 times every second until the program closes. This loop is referred to as the Game Loop.
+Hay mucha magia sucediendo donde podemos simplemente escribir `def tick` y mágicamente tener un juego. Lo que sucede aquí es que DragonRuby Game Toolkit toma el código en `mygame/app/main.rb`, encuentra el método `tick` y luego ejecuta un ciclo que lo llama 60 veces por segundo hasta que el programa se cierra. Este bucle se conoce como Game Loop.
 
-When programming games, any number of things are happening at one time. Enemies are moving, images are being displayed, math is being calculated, input is being handled. The loop runs over and over again, accounting for any changes in the state of the game. This is similar to how screens on devices work—they refresh so many times a second, so fast that it's barely perceptible to the human eye.
+Al programar juegos, suceden muchas cosas al mismo tiempo. Los enemigos se mueven, se muestran imágenes, se calculan las matemáticas, se maneja la entrada. El bucle se ejecuta una y otra vez, teniendo en cuenta cualquier cambio en el estado del juego. Esto es similar a cómo funcionan las pantallas de los dispositivos: se actualizan tantas veces por segundo, tan rápido que apenas es perceptible para el ojo humano.
 
-Within the game loop, we'll keep track of everything that's happening, update state, and render text and images. It's important to begin to think about things in a loop, as it influences timing and code structure.
+Dentro del ciclo del juego, realizaremos un seguimiento de todo lo que sucede, actualizaremos el estado y renderizaremos texto e imágenes. Es importante comenzar a pensar en las cosas en bucle, ya que influye en el tiempo y la estructura del código.
 
-![diagram showing game loop running 60x per second handling updating the world and rendering](./img/c01-gameloop.png)
+![diagrama que muestra el bucle del juego que se ejecuta 60 veces por segundo, el manejo de la actualización del mundo y la representación](./img/c01-gameloop.png)
 
-The game loop will begin to feel more natural over time, but for now, remember this: **DRGTK runs the `tick` method 60 times every second**.
+El ciclo del juego comenzará a sentirse más natural con el tiempo, pero por ahora, recuerda esto: **DRGTK ejecuta el método `tick` 60 veces por segundo**.
 
-If you're familiar with games, you may know about frames per second (FPS). That's how many frames are rendered in a given second. 60 FPS is known for its smoothness and is often a target of many games. In DragonRuby GTK, the 60 ticks per second can be thought of as the same as your game running 60 frames per second (FPS).
+Si está familiarizado con los juegos, es posible que conozca los cuadros por segundo (FPS). Esa es la cantidad de fotogramas que se procesan en un segundo dado. 60 FPS es conocido por su suavidad y, a menudo, es el objetivo de muchos juegos. En DragonRuby GTK, los 60 tics por segundo se pueden considerar como si tu juego se ejecutara a 60 cuadros por segundo (FPS).
 
-## What's Next
+## Que Sigue
 
-Let's get the player dragon moving around on the screen when we press certain keys. Player input is foundational to making games and a great next step.
+Hagamos que el dragón del jugador se mueva en la pantalla cuando presionemos ciertas teclas. La aportación de los jugadores es fundamental para crear juegos y un excelente próximo paso.
