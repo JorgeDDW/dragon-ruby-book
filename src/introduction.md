@@ -1,137 +1,136 @@
-# Introduction
+# Introducción
 
-![cover of Building Games with DragonRuby, with the subtitle 'A comprehensive guide to shipping cross-platform games with ease' by Brett Chalupa and the Dragon Rider Community.](./img/cover.jpg)
+![portada de Creando Juegos con DragonRuby, con el subtítulo 'Una guía completa para enviar juegos multiplataforma con facilidad' de Brett Chalupa y Dragon Rider Community.](./img/cover.jpg)
 
-This book is aimed at new game developers who are interested in learning to code and build games. If you've written code before, especially Ruby, then you'll have a bit of a head start. But the concepts in this book are beginner friendly. Whether you're new to game dev or just DragonRuby Game Toolkit, you'll have made a finished game by the end of this.
+Este libro está dirigido a nuevos desarrolladores de juegos que estén interesados en aprender a codificar y crear juegos. Si ha escrito código antes, especialmente Ruby, entonces tendrá un poco de ventaja. Pero los conceptos de este libro son aptos para principiantes. Ya sea que sea nuevo en el desarrollo de juegos o simplemente DragonRuby Game Toolkit, habrá creado un juego terminado al final de este.
 
-You need no prior experience with programming or game making to follow this book.
+No necesita experiencia previa con la programación o la creación de juegos para seguir este libro.
 
-## Why Learn How to Make Games
+## Por qué aprender a hacer juegos
 
-Making games is a total blast. It's challenging but rewarding. They're the sum total of many creative mediums, _plus_ they're interactive. You'll learn so many different skills by making games:
+Hacer juegos es una maravilla. Es desafiante pero gratificante. Son la suma total de muchos medios creativos, además de que son interactivos. Aprenderás tantas habilidades diferentes haciendo juegos:
 
-- Programming and logic
-- Rendering images
-- Responding to input
-- Game design
-- Interactive design
-- Working with image files
-- Editing audio files
-- Distributing the game software to users
-- Getting feedback from your game and iterating to make it better
+- Programación y lógica.
+- Renderizado imágenes
+- Respondiendo a entrada
+- Diseño de juego
+- Diseño interactivo
+- Trabajar con archivos de imagen.
+- Edición de archivos de audio
+- Distribuir el software del juego a los usuarios.
+- Obtener comentarios de tu juego e iterarlo para mejorarlo
 
-Whether your dream is to make games as your profession or just as a hobby, I think it's a creative practice worth pursuing.
+Ya sea que tu sueño sea hacer juegos como profesión o simplemente como un pasatiempo, creo que es una práctica creativa que vale la pena seguir.
 
-## About DragonRuby Game Toolkit
+## Acerca del kit de herramientas del juego DragonRuby
 
-[DragonRuby Game Toolkit](https://dragonruby.org/toolkit/game) (DRGTK) is a cross-platform game engine for building 2D games. It lets you write games in Ruby, a wonderfully expressive and approachable language. It allows you to quickly iterate on your games and ship them to any modern platform—modern operating systems, mobile devices, and game consoles.
+[DragonRuby Game Toolkit](https://dragonruby.org/toolkit/game) (DRGTK) es un motor de juego multiplataforma para crear juegos 2D. Te permite escribir juegos en Ruby, un lenguaje maravillosamente expresivo y accesible. Le permite iterar rápidamente en sus juegos y enviarlos a cualquier plataforma moderna: sistemas operativos modernos, dispositivos móviles y consolas de juegos.
 
-DRGTK is **not** a no-code engine. You'll write the code that makes your game run. This may seem scary at first, but it's a lot of fun and really powerful. Making games is also a great way to learn how to code! Don't know Ruby? That's okay, this book will teach you what you need to know.
+DRGTK **no** es un motor sin código. Escribirás el código que hace que tu juego se ejecute. Esto puede parecer aterrador al principio, pero es muy divertido y realmente poderoso. ¡Crear juegos también es una excelente manera de aprender a programar! ¿No sabes a Ruby? Está bien, este libro te enseñará lo que necesitas saber.
 
-### But it isn't free!
+### ¡Pero no es gratis!
 
-DRGTK costs money, yes. And there are plenty of free game engines out there. But the DRGTK team is committed to sustainably working on the engine and making it the best it can be, which means they need to get paid for their work. Support small teams by buying their software. Paying for software shows you're interested, and it helps them keep doing what they love.
+DRGTK cuesta dinero, sí. Y hay muchos motores de juegos gratuitos por ahí. Pero el equipo de DRGTK está comprometido a trabajar de manera sostenible en el motor y hacerlo lo mejor posible, lo que significa que necesitan que se les pague por su trabajo. Apoya a equipos pequeños comprando su software. Pagar por el software muestra que estás interesado y les ayuda a seguir haciendo lo que aman.
 
-You're investing in the engine and ecosystem, quite literally, by buying DRGTK. I want to see it succeed, so I bought a license. I want to see it succeed so badly I've written this book to try to help _you_ make games with it. The more successful DragonRuby Game Toolkit is, the better it will be for everyone making games with it.
+Está invirtiendo en el motor y el ecosistema, literalmente, al comprar DRGTK. Quiero que tenga éxito, así que compré una licencia. Tengo tantas ganas de que tenga éxito que he escrito este libro para tratar de ayudarte a hacer juegos con él. Cuanto más exitoso sea DragonRuby Game Toolkit, mejor será para todos los que hagan juegos con él.
 
-Plus, if you're a student or in need of financial assistance, the DragonRuby team offers free licenses. [Get in touch with the team to get a free license.](https://dragonruby.org/toolkit/game)
+Además, si eres estudiante o necesitas asistencia financiera, el equipo de DragonRuby ofrece licencias gratuitas. [Póngase en contacto con el equipo para obtener una licencia gratuita.](https://dragonruby.org/toolkit/game)
 
-There's also [a free, interactive environment online](https://fiddle.dragonruby.org) you can use to sample DragonRuby GTK. Give it a try and see what you think!
+También hay [un entorno interactivo gratuito en línea](https://fiddle.dragonruby.org) puedes usar para probar DragonRuby GTK. ¡Pruébelo y vea lo que piensa!
 
-## Why DragonRuby Game Toolkit
+## Por qué DragonRuby Game Toolkit
 
-There are more game engines, frameworks, and libraries than I can count on my hands and toes. So why should you use DragonRuby Game Toolkit?
+Hay más motores de juegos, frameworks y bibliotecas de las que puedo contar con los dedos de las manos y los pies. Entonces, ¿por qué deberías usar DragonRuby Game Toolkit?
 
-That's a legit question. Here are my reasons why:
+Esa es una pregunta legítima. Aquí están mis razones por las cuales:
 
-- It's focused on 2D games, so there are no competing interests in how the tooling works. It means what you need to know is pretty simple and easy to remember.
-- It makes it _so_ simple to distribute games for all modern platforms, from desktop computers to the web to mobile devices to consoles. It's truly cross-platform and _just works_, which is amazing.
-- It's fast a heck, which is important for making quality games.
-- It makes use of Ruby, which is a wonderfully productive programming language.
-- It doesn't force you to use a specific editor or tooling.
-- It's lightweight to run the engine, which means you can make games on any computer, even a Raspberry Pi.
-- It has live-reload and no compile times, which means when you change your game code, it automatically refreshes in the running engine. This is honestly so amazing. You wouldn't know how incredible this is unless you've used other game engines that require you compile your game with each change.
+- Se centra en los juegos 2D, por lo que no hay intereses en conflicto en el funcionamiento de las herramientas. Significa que lo que necesita saber es bastante simple y fácil de recordar.
+- Hace que sea _tan_ simple distribuir juegos para todas las plataformas modernas, desde computadoras de escritorio hasta la web, desde dispositivos móviles hasta consolas. Es verdaderamente multiplataforma y _simplemente funciona_, lo cual es increíble.
+- Es muy rápido, lo cual es importante para hacer juegos de calidad.
+- Hace uso de Ruby, que es un lenguaje de programación maravillosamente productivo.
+- No te obliga a usar un editor o herramientas específicas.
+- Es liviano para ejecutar el motor, lo que significa que puede crear juegos en cualquier computadora, incluso en una Raspberry Pi.
+- Tiene recarga en vivo y sin compilación, lo que significa que cuando cambias el código del juego, se actualiza automáticamente en el motor en ejecución. Honestamente, esto es tan asombroso. No sabrías lo increíble que es esto a menos que hayas usado otros motores de juegos que requieren que compiles tu juego con cada cambio.
 
-I'm going to be honest, DRGTK might not be for you. If you want to make 3D games, look elsewhere. Although, if you're new to game development, I wouldn't recommend starting with a 3D game. If you're absolutely not willing to try coding, look elsewhere.
+Voy a ser honesto, DRGTK podría no ser para ti. Si quieres hacer juegos en 3D, busca en otra parte. Aunque, si eres nuevo en el desarrollo de juegos, no te recomendaría comenzar con un juego en 3D. Si no está dispuesto a programar, busque en otra parte.
 
-But for everyone else, I think DRGTK will knock your socks off (or at least shift them down a little).
+Pero para todos los demás, creo que DRGTK los dejará boquiabiertos (o al menos los bajará un poco).
 
-## Mindset
+## Mentalidad
 
-When learning something new, especially something that's challenging, it's important to have the right mindset.
+Cuando se aprende algo nuevo, especialmente algo desafiante, es importante tener la mentalidad correcta.
 
-- Be curious: it's the best way to learn!
-- Be patient: learning is difficult, but stick with it
-- Be kind: to yourself and others
+- Sé curioso: ¡es la mejor manera de aprender!
+- Sea paciente: aprender es difícil, pero persiste.
+- Sé amable: contigo mismo y con los demás.
 
-When we learn how to play a new instrument, we learn the basics by covering simplistic pieces of music. Similarly, we're going to "cover" simpler game mechanics to get you started. Before long, you'll grasp the basics and be able to move onto more complex games and mechanics.
+Cuando aprendemos a tocar un nuevo instrumento, aprendemos los conceptos básicos cubriendo piezas musicales simples. Del mismo modo, vamos a "cubrir" mecánicas de juego más simples para que pueda comenzar. En poco tiempo, comprenderá los conceptos básicos y podrá pasar a juegos y mecánicas más complejos.
 
-Start by making small games that you can finish in a couple of days. Make a lot of small games to learn quickly. Don't get too wrapped up in your dream idea or making something that gets on Steam. Definitely don't try to make an MMORPG. Instead, focus on **shipping** your small games.
+Comienza haciendo pequeños juegos que puedas terminar en un par de días. Haz muchos juegos pequeños para aprender rápidamente. No te envuelvas demasiado en la idea de tus sueños o en hacer algo que llegue a Steam. Definitivamente no intentes hacer un MMORPG. En su lugar, concéntrese en **publicar** tus pequeños juegos.
 
-What's shipping? Isn't that when you want Mulder and Scully to kiss? No! Get your head out of the gutter you alien-loving freak. (I want to believe! 🛸) Shipping is when you 1. finish your game and 2. release it for people to play it.
+¿Qué vas a Publicar? Publicar es cuando 1. terminas tu juego y 2. lo liberas para que la gente lo juegue.
 
-So here's your mindset, boiled down: make a small game and ship it for free, then make another small game and ship it for free. Before long, you'll be building a visual novel where Mulder and Scully kiss. Now, imagine yourself swimming in a pool of cryptocoins! But seriously, what that iterative mindset will do is help you grow as a developer, build a fanbase, and get your shipping muscle primed and ready for making a better game each time.
+Así que esta debe ser tu forma de pensar, resumida: crea un juego pequeño y publicalo gratis, luego crea otro juego pequeño y publicalo gratis. Lo que hará esta mentalidad iterativa es ayudarte a crecer como desarrollador, crear una base de juegos y fans y preparar tu fuerza de publicar para prepararte a hacer un juego mejor cada vez.
 
-## What We'll Be Making
+## Lo Que Estaremos Haciendo
 
-![screenshot of the finished game of what you'll be making](./img/c09-blue-sky.jpg)
+![captura de pantalla del juego terminado de lo que vas a hacer](./img/c09-blue-sky.jpg)
 
-Throughout the book, we'll be building a simple shoot-'em-up where you pilot a dragon. Our game will be called _Target Practice_. You'll learn all of the foundational aspects of making a game:
+A lo largo del libro, construiremos un shoot-'em-up simple en el que pilotas un dragón. Nuestro juego se llamará _Target Practice_. Aprenderás todos los aspectos básicos de la creación de un juego:
 
-- The game loop
-- Rendering text
-- Rendering sprites and animating them
-- Handling input
-- Playing sound effects and music
-- Polishing your game
-- Shipping it!
+- El bucle del juego
+- Renderiar textos
+- Renderizar sprites y animarlos.
+- Manejo de entrada
+- Reproducción de efectos de sonido y música.
+- Mejorar tu juego
+- ¡Enviándolo!
 
-[🎮 Play the game right in your browser!](https://dragonridersunite.itch.io/dragonruby-book) (You can even download it for your OS.)
+[🎮 ¡Juega el juego directamente en tu navegador!](https://dragonridersunite.itch.io/dragonruby-book) (Incluso puedes descargarlo en tu sistema operativo).
 
-## Hold the Gosh Dang Phone
+## Sostén el Teléfono
 
-"Who the heck are _you_?" you might be shouting at your screen. Little ole me? I'm just the voice of the dragon that lives within all beings! No, no, I kid. I'm Brett! I'm a programmer who enjoys making games and sharing what I've learned along the way.
+"Quién emonios _eres_?" podrías estar gritando a tu pantalla. ¿Yo? ¡Soy solo la voz del dragón que vive dentro de todos los seres! No, no, bromeo. ¡Soy Brett! Soy un programador que disfruta haciendo juegos y compartiendo lo que he aprendido en el camino.
+![avatar de píxeles de Brett](./img/brett.png)
 
-![pixel avatar of Brett](./img/brett.png)
+¡Lo mismo! Si yo fuera un montón de píxeles, supongo.
 
-That's-a-me! If I was a bunch of pixels I guess.
+Me encanta Ruby. Lo he estado escribiendo durante más de 12 años, y es una alegría. También me encantan los juegos. Particularmente los 2D. Aqui estamos. 💎 + ❤️ + 🎮 = 📕 Vaya ecuación, ¡¿no?!
 
-I love Ruby. I've been writing it for over 12 years, and it's such a joy. I also love games. Particularly 2D ones. So here we are. 💎 + ❤️ + 🎮 = 📕 How's that for an equation?!
+¿Quieres que hable en serio acerca de por qué deberías escucharme? Oh, te saltaste esta sección, está bien. Wow, ¿Ya estás tratando de sacarme? ¿Tan rapido? Bueno, ¡nos vemos en el próximo capítulo! Veremos quién ríe el último.
 
-You want me to be serious about why you should listen to me? Oh, you skipped this section, okay fine. Wow, did you drop that banana peel there? You trying to take me out already? This early in the book? Well, I'll see you in the next chapter! We'll see who gets the last laugh.
+## Por qué el libro es gratis
 
-## Why the Book is Free
+Cuando tenía 16 años, tomé una clase de informática en la escuela secundaria. Fue mi primera exposición a la programación con un lenguaje más complejo que HTML y CSS. Programamos en Java. Por alguna extraña razón, mi maestra nos pidió que imprimiéramos nuestras tareas para calificarlas.
 
-When I was 16, I took a computer science class in high school. It was my first exposure to programming with a language more complex than HTML and CSS. We programmed in Java. For some odd reason, my teacher had us print out our assignments for grading.
+Esa clase fue fundamental en el curso que tomaría mi vida en los 14 años transcurridos desde entonces. A los 16 años era un niño emo al que le encantaban los videojuegos y el anime. Imagina a un adolescente de cabello ondulado en su habitación escuchando Bright Eyes mientras juega _Final Fantasy XII_. Ese fui yo.
 
-That class was foundational in the course my life would take in the 14 years since. At age 16 I was an emo kid who loved video games and anime. Imagine a swoopy haired teen in their bedroom listening to Bright Eyes while playing _Final Fantasy XII_. That was me.
+Entonces, naturalmente, para mi proyecto final en esa clase de informática de la escuela secundaria, hice un juego. Pilotas un Moltres de Pokémon que dispara bolas de fuego a los robots Zaku de Gundam que vuelan por la pantalla. Si te golpea un enemigo, se acabó el juego. Si derrotas a todos los enemigos, ganas. Este juego se tituló cariñosamente _Zaku Space Battle_.
 
-So naturally, for my final project in that high school computer science class I made a game. You pilot a Moltres from Pokemon who shoots fireballs at Zaku mechs from Gundam that fly across the screen. If you get hit by an enemy, it's game over. If you defeat all of the enemies, you win. This game was lovingly titled _Zaku Space Battle_.
+![captura de pantalla de Zaku Space Battle que muestra el sprite de Moltres, los sprites de Zaku, la bola de fuego y el fondo del espacio](./img/zaku-space-battle.jpg)
 
-![screenshot of Zaku Space Battle showing the Moltres sprite, Zaku sprites, fire ball, and space background](./img/zaku-space-battle.jpg)
+Para hacer ese juego, seguí un tutorial gratuito en línea que establecía las bases para hacer un juego con Java. No había forma de que hubiera descubierto por mi cuenta cómo hacer un juego en ese momento sin la ayuda de un tutorial gratuito en línea. Me divertí tanto haciendo ese proyecto final que fui a la universidad para estudiar programación de juegos y hacer programación para mi carrera. Tomé lo que aprendí de ese tutorial, amplié la funcionalidad y lo hice mío (con sprites de derechos de autor, ¡pero aún así!).
 
-In order to make that game, I followed a free online tutorial that laid out the foundations of making a game with Java. There was no way I would have figured out on my own how to make a game at that point without help from a free online tutorial. I had _so_ much fun making that final project that I went to college to study game programming and do programming for my career. I took what I learned from that tutorial, expanded the functionality, and made it my own (with copyright sprites, but still!).
+Este libro es de libre acceso para que alguien que ama los juegos y quiera intentar hacerlos pueda hacerlo. Los recursos de programación gratuitos realmente han dado forma a mi vida y mi carrera. Así que este libro es mi forma de retribuir y tratar de ayudar a otros desarrolladores.
 
-This book is freely accessible so that someone who loves games and wants to try making them can do so. Free programming resources have truly shaped my life and career. So this book is my way of giving back and trying to help other developers.
+Aprenderas los fundamentos de la programación y creación de juegos, así como algunos temas más avanzados. Si este libro puede ayudar incluso a una sola persona a comenzar y terminar un juego, vale la pena cada minuto que he dedicado a él. Haremos un juego no muy diferente de _Zaku Space Battle_. Una vez que lo termines, ¡toma lo que has aprendido y hazlo tuyo!
 
-You'll learn the foundations of game programming and making games, as well as some more advanced topics. If this book can help even just one person start and finish a game, it's worth every minute I've spent on it. We'll make a game not too dissimilar from _Zaku Space Battle_. Once you finish it, take what you've learned and make it your own!
+Si quieres, puedes [invitarme a un café](https://buymeacoffee.com/brettchalupa) como una forma de decir gracias. Es muy apreciado.
 
-If you want to, you can [buy me a coffee](https://buymeacoffee.com/brettchalupa) as a way of saying thank you. It's much appreciated.
+## Contribuir
 
-## Contribute
+Este libro es de código abierto. Eso significa que cualquiera puede ver el código que lo crea y contribuir a mejorarlo. ¿Encontraste algo que no funciona, contiene un error tipográfico o le falta claridad? [Envíe un issue o contribuya en GitHub.](https://github.com/DragonRidersUnite/book) Es fácil y puede hacerlo directamente desde su navegador. ¡Gracias por adelantado!
 
-This book is open source. That means anyone can view the code that builds it and contribute toward making it better. Did you find something that doesn't work, contains a typo, or lacks clarity? [Submit an issue or contribute on GitHub.](https://github.com/DragonRidersUnite/book) It's easy, and you can do it right from your browser. Thanks in advance!
+Si está atascado y deseas sobtener ayuda adicional, comuníquese con [DragonRuby Discord] (https://discord.dragonruby.org). ¡Te despegaremos!
 
-If you're stuck and would like some extra assistance, reach out in [the DragonRuby Discord](https://discord.dragonruby.org). We'll get you unstuck!
+## Cómo leer el libro
 
-## How to Read the Book
+Cada capítulo se basa en el anterior. Pasarás de mostrar una sola imagen a crear un juego completo al final del libro. El código que se agrega y cambia se explica en detalle, pero puede [siempre encontrar el código fuente para cada capítulo en GitHub](https://github.com/DragonRidersUnite/book/tree/main/src/code).
 
-Each chapter builds upon the last. You'll go from displaying a single image to making a full game by the end of the book. The code that's added and changed is explained in detail, but you can [always find the source code for each chapter on GitHub](https://github.com/DragonRidersUnite/book/tree/main/src/code).
-
-Code alongside the book, but feel free to make adjustments and experiment if you're feeling excited.
+Programa junto con el libro, pero siéntase libre de hacer ajustes y experimentar si te sientes emocionado.
 
 Prefer an offline version? [You can find a PDF and HTML version for download on the Itch page.](https://dragonridersunite.itch.io/dragonruby-book)
 
-## Get Started
+## Empezar
 
-All right, are you ready to make a game? Let's get started!
+Muy bien, ¿estás listo para hacer un juego? ¡Empecemos!
